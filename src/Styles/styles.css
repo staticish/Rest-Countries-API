@@ -1,0 +1,390 @@
+@import url("https://fonts.google.com/specimen/Nunito+Sans");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1300px) {
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+[class*="theme-"] {
+  background: var(--bg);
+  color: var(--body);
+}
+
+.theme-button {
+  margin-left: auto;
+  outline: none;
+}
+
+img,
+picture {
+  max-width: 120%;
+  display: block;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+.darkText * {
+  color: black;
+}
+
+.container {
+  padding-inline: 3em;
+  max-width: 100%;
+  grid-gap: 45px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-rows: repeat(2, 380px);
+}
+.country-container {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 0));
+}
+.container * {
+  text-decoration: none;
+  color: black;
+}
+.card {
+  height: auto;
+  width: 110%;
+  margin-left: 0.5rem;
+  border-radius: 10px;
+  background: white;
+}
+.card:hover {
+  transform: scale(110%);
+}
+
+.card .card-flag {
+  height: 150px;
+  z-index: 1000;
+}
+.flag {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.info:nth-child(2) {
+  padding: 10px;
+}
+
+.name {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  padding-bottom: 2rem;
+  height: 5rem;
+}
+nav {
+  height: 70px;
+  display: flex;
+  padding: 20px 36px;
+
+  margin-bottom: 2rem;
+  justify-content: left;
+}
+
+nav h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-inline: 1em;
+}
+
+input {
+  margin-right: auto;
+  margin-left: 3rem;
+  width: 20rem;
+  text-indent: 3rem;
+  font-size: 22px;
+}
+
+form svg {
+  position: absolute;
+  margin-left: 3.5rem;
+  margin-top: 0.7rem;
+}
+
+.box-shadow {
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+nav div {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+nav img {
+  cursor: pointer;
+}
+.back-button * {
+  margin-right: 12px;
+}
+.back-button-content:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  margin-left: 20px;
+}
+.back-button:hover {
+  box-shadow: inset 0 0 0 1px grey;
+}
+.back-button {
+  margin-left: 4rem;
+  box-shadow: 0 0px 3.4564px 3px rgba(0, 0, 0, 0.1);
+  width: 7rem;
+  padding: 4px;
+  background: var(--white);
+  border-radius: 5px;
+  font: inherit;
+}
+.loading {
+  text-align: center;
+  font-size: 2rem;
+  place-self: center;
+}
+
+.details {
+  gap: 0%;
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(0px, 1fr));
+  margin-top: 2rem;
+}
+.info h1 {
+  width: 25rem;
+}
+.details div {
+  margin-bottom: 30%;
+}
+.details .info {
+  line-height: 30px;
+  margin-left: 14rem;
+}
+.info2 {
+  grid-column: 5/-1;
+  grid-row: 2/-1;
+  position: relative;
+  bottom: 17.7rem;
+}
+.details img {
+  width: 150%;
+  height: 22rem;
+  margin-left: 5rem;
+}
+
+.border-elements button {
+  height: 2rem;
+  width: 100px;
+  box-shadow: 0 0px 3.4564px 3px rgba(0, 0, 0, 0.1);
+  background: var(--white);
+  border-radius: 5px;
+  opacity: 5.5;
+  font-size: 12px;
+}
+
+.border-elements {
+  grid-template-columns: repeat(4, 140px);
+  grid-template-rows: repeat(1, 30px);
+  gap: 1rem;
+  left: 38rem;
+  bottom: 15rem;
+  position: absolute;
+}
+.border-elements button:hover {
+  box-shadow: inset 0 0 0 1px grey;
+}
+.languages {
+  display: inline-block;
+  line-height: 0;
+  margin: 0;
+}
+
+.drop-down * {
+  overflow: hidden;
+  cursor: pointer;
+  background: white;
+  margin-right: 3.5rem;
+}
+
+/* MOBILE VERSION */
+@media (max-width: 540px) {
+  * {
+    place-content: center;
+  }
+  nav h1 {
+    width: 7rem;
+    line-height: 1.5rem;
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 14px;
+    width: 20rem;
+  }
+  h3 {
+    font-size: 14px;
+    width: 7rem;
+  }
+  nav {
+    padding: 0;
+    place-items: center;
+    user-select: none;
+  }
+  nav div img {
+    bottom: 0.2rem;
+    left: 1rem;
+    position: relative;
+  }
+  .drop-down {
+    position: absolute;
+    top: 12rem;
+    left: 3rem;
+    /* margin-left: 10rem; */
+  }
+  input {
+    font-size: 20px;
+    margin-top: 2rem;
+    position: absolute;
+    height: 3rem;
+    width: 20rem;
+    margin-left: -1rem;
+    text-indent: 3rem;
+  }
+  form svg {
+    z-index: 9000;
+    left: -10.5rem;
+    top: 2rem;
+    position: relative;
+  }
+
+  form {
+    margin-bottom: 5rem;
+  }
+  .container {
+    margin-right: auto;
+  }
+  .card:hover {
+    transform: none;
+  }
+  .details {
+    gap: 0%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 0fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 0fr));
+    margin-top: 1rem;
+    place-items: center;
+    margin-right: 7rem;
+  }
+
+  .info h1 {
+    width: 0rem;
+    margin-top: 0rem;
+  }
+  .details div {
+    margin-bottom: 0%;
+  }
+  .details .info {
+    line-height: 30px;
+    margin-left: 0rem;
+  }
+  .back-button {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  .info2 {
+    grid-column: 1/-1;
+
+    top: 24rem;
+    line-height: 2rem;
+    margin-right: 2rem;
+    left: 0rem;
+  }
+  .details img {
+    width: 60%;
+    height: 13rem;
+    margin-left: 5rem;
+  }
+
+  .border-elements button {
+    height: 2.5rem;
+
+    border-radius: 0px;
+
+    font-size: 12px;
+    margin-bottom: 2rem;
+  }
+
+  .border-elements {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 50px);
+    gap: 1rem;
+    left: 0rem;
+    top: 12rem;
+    margin-top: 2rem;
+  }
+  .border-elements button:hover {
+    box-shadow: inset 0 0 0 1px grey;
+  }
+  .languages {
+    display: inline-block;
+    line-height: 0;
+    margin: 0;
+  }
+}
